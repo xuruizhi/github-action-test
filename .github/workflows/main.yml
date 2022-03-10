@@ -18,7 +18,7 @@ jobs:
 
     steps:
     - name: Mirror the Github organization repos to Gitee.
-      uses: Yikun/hub-mirror-action@master
+      uses: Yikun/hub-mirror-action@v1.2
       with:
         src: github/xuruizhi
         dst: gitee/xuruizhi
