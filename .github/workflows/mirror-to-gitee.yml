@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: mirror-to-gitee
 
 # Controls when the workflow will run
@@ -7,7 +5,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -15,7 +12,6 @@ jobs:
   run:
     name: Run
     runs-on: ubuntu-latest
-
     steps:
     - name: Mirror the Github organization repos to Gitee.
       uses: Yikun/hub-mirror-action@v1.2
@@ -24,7 +20,4 @@ jobs:
         dst: gitee/xuruizhi
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token: ${{ secrets.GITEE_TOKEN }}
-        # account_type: org
-        # src_account_type: org
-        # dst_account_type: org
         white_list: github-action-test
